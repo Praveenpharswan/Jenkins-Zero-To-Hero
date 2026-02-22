@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                dir('hello-jenkins') {
+                    sh 'javac HelloWorld.java'
+                }
+            }
+        }
+
+        stage('Run') {
+            steps {
+                dir('hello-jenkins') {
+                    sh 'java HelloWorld'
+                }
+            }
+        }
+    }
+}
