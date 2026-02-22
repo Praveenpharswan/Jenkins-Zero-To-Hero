@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                dir('hello-jenkins') {
+                dir('Hello-Java-World-Project') {
                     sh 'javac HelloWorld.java'
                 }
             }
@@ -12,7 +12,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                dir('hello-jenkins') {
+                dir('Hello-Java-World-Project') {
                     sh 'java HelloWorld'
                 }
             }
